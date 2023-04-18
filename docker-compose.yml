@@ -20,7 +20,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=mydb
     volumes:
-      - db_data:/var/lib/postgresql/data/
+      - ./postgres:/var/lib/postgresql/data
   # Фронтенд сервис с React
   frontend:
     build: ./frontend
