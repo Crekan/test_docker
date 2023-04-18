@@ -18,6 +18,8 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    volumes:
+      - db_data:/var/lib/postgresql/data/
   # Фронтенд сервис с React
   frontend:
     build: ./frontend
@@ -25,3 +27,5 @@ services:
       - "3000:3000"
     depends_on:
       - backend
+volumes:
+  db_data:
