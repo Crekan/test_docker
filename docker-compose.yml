@@ -13,7 +13,7 @@ services:
       - db
   # Сервис базы данных PostgreSQL
   db:
-    image: postgresl
+    image: postgres
     restart: always
     environment:
       - POSTGRES_DB=postgres
